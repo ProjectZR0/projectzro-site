@@ -1,0 +1,8 @@
+html,body{margin:0;height:100%;background:#02030A;color:#F4F7FF;font-family:Arial,sans-serif;overflow:hidden}
+#stars{position:fixed;inset:0}
+.center{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.symbol{font-size:4rem;color:#7D5CFF;animation:pulse 4s infinite}
+nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px}
+a{color:#3EC8FF;text-decoration:none}
+a:hover{text-shadow:0 0 8px #3EC8FF}
+@keyframes pulse{50%{transform:scale(1.05);text-shadow:0 0 25px #7D5CFF}}
