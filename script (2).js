@@ -1,0 +1,1 @@
+setTimeout(()=>document.querySelector('.boot').textContent='SIGNAL LOCKED',2500);
