@@ -1,0 +1,13 @@
+
+html,body{margin:0;height:100%;overflow:hidden;background:#02030a;font-family:Arial,sans-serif;color:#fff}
+#stars{position:fixed;inset:0}
+.vignette{position:fixed;inset:0;background:radial-gradient(circle,transparent 35%,rgba(0,0,0,.85))}
+.hero{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:min(90%,900px)}
+.scan{letter-spacing:.45em;color:#7fd2ff;margin-bottom:20px;animation:pulse 2s infinite}
+h1{font-size:clamp(3rem,9vw,6rem);font-weight:200;letter-spacing:.25em;text-shadow:0 0 30px #7b8cff}
+.line{height:2px;width:220px;margin:28px auto;background:linear-gradient(90deg,transparent,#73a7ff,#cb7fff,transparent)}
+p{color:#d6dcef;font-size:1.2rem}
+.buttons{display:flex;justify-content:center;gap:18px;margin-top:35px}
+.buttons a{padding:14px 28px;border:1px solid #6b8fff;border-radius:40px;color:white;text-decoration:none;background:rgba(90,120,255,.08);transition:.3s}
+.buttons a:hover{transform:scale(1.05);box-shadow:0 0 25px rgba(120,150,255,.5)}
+@keyframes pulse{50%{opacity:.4}}
