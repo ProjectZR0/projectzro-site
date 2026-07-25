@@ -1,0 +1,13 @@
+html,body{margin:0;height:100%;background:#03040a;color:#eef;font-family:system-ui;overflow:hidden}
+canvas{position:fixed;inset:0}
+#boot,#world{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px}
+.hidden{display:none}.small{letter-spacing:.3em;color:#8cf}.subtitle{color:#9df}
+#status{margin:18px;font-size:1.2rem}
+button{padding:14px 28px;background:transparent;color:#bff;border:1px solid #6af;border-radius:40px}
+.symbol{position:relative;width:160px;height:160px;margin-bottom:30px;animation:pulse 5s infinite}
+.ring{position:absolute;inset:0;border:3px solid #79f;border-radius:50%;box-shadow:0 0 30px #57f}
+.tri{position:absolute;left:50%;top:22%;transform:translateX(-50%);
+width:0;height:0;border-left:42px solid transparent;border-right:42px solid transparent;border-bottom:72px solid #9ff;filter:drop-shadow(0 0 12px #7ff)}
+.grid{display:grid;gap:14px;width:min(320px,90vw)}
+.grid a{text-decoration:none;color:#fff;border:1px solid #557;padding:14px;border-radius:10px;background:#10152acc}
+@keyframes pulse{50%{transform:scale(1.03);filter:brightness(1.2)}}
