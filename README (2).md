@@ -1,1 +1,0 @@
-Replace your repository files with these to upgrade the homepage.
