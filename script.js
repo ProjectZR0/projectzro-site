@@ -18,3 +18,32 @@ for(let i=meteors.length-1;i>=0;i--){const m=meteors[i];g.strokeStyle=`rgba(180,
 if(h&&!h.classList.contains('hidden')){floatTime+=0.015;h.style.transform=`translateY(${Math.sin(floatTime)*5}px)`;}
 requestAnimationFrame(animate);
 })();
+
+/* ==== Genesis 005 Release 002 ==== */
+(function(){
+ let last=0;
+ function flash(){
+   const c=document.getElementById('stars');
+   if(!c)return;
+   const ctx=c.getContext('2d');
+   const w=c.width,h=c.height;
+   const x=Math.random()*w,y=Math.random()*h;
+   ctx.strokeStyle='rgba(180,220,255,.8)';
+   ctx.beginPath();
+   ctx.moveTo(x,y);
+   ctx.lineTo(x-120,y+70);
+   ctx.stroke();
+ }
+ setInterval(flash,12000);
+
+ let t=0;
+ function drift(){
+   const hero=document.getElementById('hero');
+   if(hero){
+      t+=0.01;
+      hero.style.transform='translateY('+Math.sin(t)*4+'px)';
+   }
+   requestAnimationFrame(drift);
+ }
+ requestAnimationFrame(drift);
+})();
