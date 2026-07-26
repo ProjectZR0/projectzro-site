@@ -1,0 +1,160 @@
+/* Project // ZRO - Genesis 005
+   File: css/signal.css */
+
+:root{
+ --bg:#03040b;
+ --violet:#bf8cff;
+ --blue:#79d7ff;
+ --white:#eef7ff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html,body{
+ height:100%;
+ overflow:hidden;
+ background:var(--bg);
+ color:var(--white);
+ font-family:Inter,Segoe UI,Arial,sans-serif;
+}
+
+#starfield,#nebula,#vignette{
+ position:fixed;
+ inset:0;
+}
+
+#starfield{z-index:0}
+
+#nebula{
+ z-index:1;
+ background:
+ radial-gradient(circle at 20% 25%,rgba(176,90,255,.18),transparent 42%),
+ radial-gradient(circle at 78% 68%,rgba(80,180,255,.14),transparent 38%),
+ radial-gradient(circle at 50% 90%,rgba(255,80,220,.08),transparent 40%);
+ filter:blur(60px);
+ animation:drift 22s ease-in-out infinite alternate;
+}
+
+#vignette{
+ z-index:2;
+ background:radial-gradient(circle,transparent 35%,rgba(0,0,0,.88));
+}
+
+#boot-screen,
+#hero{
+ position:absolute;
+ inset:0;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ z-index:3;
+}
+
+.boot-panel{
+ width:min(92%,720px);
+ padding:2rem;
+ border:1px solid rgba(121,215,255,.25);
+ background:rgba(5,10,20,.55);
+ backdrop-filter:blur(12px);
+ box-shadow:0 0 40px rgba(121,215,255,.08);
+}
+
+.boot-panel h2{
+ text-align:center;
+ letter-spacing:.45rem;
+ font-weight:300;
+ margin-bottom:2rem;
+}
+
+.terminal{
+ font-family:Consolas,monospace;
+ color:var(--blue);
+ line-height:2;
+ min-height:9rem;
+}
+
+.progress{
+ margin-top:1.5rem;
+ height:8px;
+ border-radius:99px;
+ background:rgba(255,255,255,.08);
+ overflow:hidden;
+}
+
+#progress-bar{
+ width:0%;
+ height:100%;
+ background:linear-gradient(90deg,var(--blue),var(--violet));
+ box-shadow:0 0 18px var(--blue);
+ transition:width .4s ease;
+}
+
+.hidden{
+ opacity:0;
+ pointer-events:none;
+}
+
+#hero{
+ gap:1.4rem;
+ transition:opacity 1.5s ease;
+}
+
+.symbol-wrapper{
+ width:240px;
+ height:240px;
+ display:grid;
+ place-items:center;
+ filter:drop-shadow(0 0 24px rgba(191,140,255,.75));
+ animation:pulse 5s ease-in-out infinite;
+}
+
+#symbol{
+ width:100%;
+ height:100%;
+}
+
+h1{
+ font-size:clamp(2.5rem,7vw,5.5rem);
+ letter-spacing:.35rem;
+ font-weight:200;
+ text-shadow:0 0 20px rgba(191,140,255,.4);
+}
+
+.subtitle{
+ color:var(--blue);
+ letter-spacing:.3rem;
+}
+
+.subtitle span{
+ color:#fff;
+}
+
+#enterButton{
+ padding:1rem 2.4rem;
+ border:1px solid rgba(121,215,255,.4);
+ border-radius:999px;
+ background:rgba(255,255,255,.04);
+ color:#fff;
+ letter-spacing:.2rem;
+ cursor:pointer;
+ transition:.3s;
+}
+
+#enterButton:hover{
+ transform:translateY(-2px);
+ box-shadow:0 0 22px rgba(121,215,255,.25);
+ background:rgba(121,215,255,.08);
+}
+
+@keyframes pulse{
+ 50%{
+   transform:scale(1.03);
+   filter:drop-shadow(0 0 40px rgba(191,140,255,1));
+ }
+}
+
+@keyframes drift{
+ from{transform:translate(-25px,-15px) scale(1);}
+ to{transform:translate(35px,20px) scale(1.08);}
+}
