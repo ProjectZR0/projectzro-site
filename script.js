@@ -1,3 +1,7 @@
+// Genesis 005 Release 004 - Mobile Recovery
+window.addEventListener('load', () => {
+try {
+
 // Genesis005 Dev Release001
 
 const c=document.getElementById('stars'),
@@ -70,3 +74,14 @@ requestAnimationFrame(animate);
    }
  },5000);
 })();
+
+
+} catch (err) {
+  console.error("Project // ZRO recovered from startup error:", err);
+  const hero=document.getElementById('hero');
+  if(hero){
+    hero.classList.remove('hidden');
+    hero.style.opacity='1';
+  }
+}
+});
