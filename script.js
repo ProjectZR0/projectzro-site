@@ -47,3 +47,26 @@ requestAnimationFrame(animate);
  }
  requestAnimationFrame(drift);
 })();
+
+
+/* ==== Genesis 005 Release 003 ==== */
+(function(){
+ const title=document.querySelector("h1");
+ if(title){
+   title.classList.add("transmission-glow");
+ }
+
+ const msgs=[
+   "SIGNAL STRENGTH: 100%",
+   "COSMIC LINK STABLE",
+   "WELCOME TO PROJECT // ZRO"
+ ];
+ let i=0;
+ setInterval(()=>{
+   const status=document.querySelector(".status")||document.querySelector("p");
+   if(status){
+      status.textContent=msgs[i%msgs.length];
+      i++;
+   }
+ },5000);
+})();

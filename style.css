@@ -9,3 +9,19 @@ html,body{margin:0;height:100%;overflow:hidden;background:#02030b;color:#fff;fon
   0%,100%{transform:translateY(0);}
   50%{transform:translateY(-6px);}
 }
+
+
+/* Genesis 005 Release 003 */
+#hero{
+  transition: filter .8s ease;
+}
+#hero:hover{
+  filter: drop-shadow(0 0 18px rgba(180,120,255,.45));
+}
+.transmission-glow{
+  animation: transmissionPulse 4s ease-in-out infinite;
+}
+@keyframes transmissionPulse{
+  0%,100%{opacity:1;}
+  50%{opacity:.82;}
+}
