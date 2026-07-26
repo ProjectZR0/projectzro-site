@@ -5,3 +5,14 @@ const c=document.getElementById('stars'),x=c.getContext('2d');const hero=documen
 // Genesis 005.6 Living Stars: conservative enhancement.
 
 // Genesis 005.7 Cosmic Depth: verified baseline preserved.
+
+
+/* Genesis005 Release008 - Renderer Configuration */
+const ZRO_RENDER_CONFIG = {
+  version: "008-LivingStars",
+  starColorPalette: ["#FFFFFF","#F5F7FF","#FFF9EE"],
+  brightStarChance: 0.06,
+  twinkleVariance: true
+};
+// Future renderer upgrades will consume this configuration
+// while preserving the existing animation loop.
