@@ -1,1 +1,20 @@
-const c=document.getElementById('stars'),g=c.getContext('2d'),b=document.getElementById('boot'),h=document.getElementById('hero');function r(){c.width=innerWidth;c.height=innerHeight}onresize=r;r();const s=[...Array(1100)].map(()=>({x:Math.random()*c.width,y:Math.random()*c.height,R:Math.random()*2+.2,v:Math.random()*.45+.05,t:Math.random()*6.28}));let m='CALIBRATING PROJECT // ZRO SIGNAL',i=0;const t=setInterval(()=>{b.textContent=m.slice(0,i++);if(i>m.length){clearInterval(t);setTimeout(()=>{b.style.opacity=0;h.classList.remove('hidden');setTimeout(()=>b.remove(),1000)},800)}},45);(function a(){g.fillStyle='#02030b';g.fillRect(0,0,c.width,c.height);for(const e of s){e.y+=e.v;if(e.y>c.height){e.y=0;e.x=Math.random()*c.width}e.t+=.03;g.fillStyle=`rgba(255,255,255,${.45+.55*Math.sin(e.t)})`;g.beginPath();g.arc(e.x,e.y,e.R,0,6.28);g.fill();if(Math.random()<.003){g.strokeStyle='rgba(180,220,255,.7)';g.beginPath();g.moveTo(e.x,e.y);g.lineTo(e.x-100,e.y+80);g.stroke();}}requestAnimationFrame(a)})();
+// Genesis005 Dev Release001
+
+const c=document.getElementById('stars'),
+g=c.getContext('2d'),
+b=document.getElementById('boot'),
+h=document.getElementById('hero');
+function resize(){c.width=innerWidth;c.height=innerHeight;}
+addEventListener('resize',resize);resize();
+const stars=[...Array(1100)].map(()=>({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*2+.2,v:Math.random()*.45+.05,t:Math.random()*Math.PI*2}));
+const meteors=[];
+function spawnMeteor(){meteors.push({x:c.width+200*Math.random(),y:Math.random()*c.height*.5,vx:-12-Math.random()*6,vy:8+Math.random()*4,life:70});}
+setInterval(()=>{if(Math.random()<0.75)spawnMeteor();},6000);
+let floatTime=0;
+(function animate(){
+g.fillStyle='#02030b';g.fillRect(0,0,c.width,c.height);
+for(const s of stars){s.y+=s.v;if(s.y>c.height){s.y=0;s.x=Math.random()*c.width;}s.t+=0.03;const a=.45+.55*Math.sin(s.t);g.fillStyle=`rgba(255,255,255,${a})`;g.beginPath();g.arc(s.x,s.y,s.r,0,Math.PI*2);g.fill();}
+for(let i=meteors.length-1;i>=0;i--){const m=meteors[i];g.strokeStyle=`rgba(180,220,255,${m.life/70})`;g.lineWidth=2;g.beginPath();g.moveTo(m.x,m.y);g.lineTo(m.x-140,m.y+90);g.stroke();m.x+=m.vx;m.y+=m.vy;m.life--;if(m.life<=0)meteors.splice(i,1);}
+if(h&&!h.classList.contains('hidden')){floatTime+=0.015;h.style.transform=`translateY(${Math.sin(floatTime)*5}px)`;}
+requestAnimationFrame(animate);
+})();
