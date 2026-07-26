@@ -1,1 +1,91 @@
-const c=document.getElementById('stars'),x=c.getContext('2d');const hero=document.getElementById('hero'),boot=document.getElementById('boot');function r(){c.width=innerWidth;c.height=innerHeight}onresize=r;r();const s=[...Array(900)].map(()=>({x:Math.random()*c.width,y:Math.random()*c.height,R:Math.random()*2+.3,v:Math.random()*.35+.05,t:Math.random()*6.28}));let m='SEARCHING FOR SIGNAL...',i=0;const T=setInterval(()=>{boot.textContent=m.slice(0,i++);if(i>m.length){clearInterval(T);setTimeout(()=>{boot.textContent='LOCK ACQUIRED';setTimeout(()=>{boot.style.opacity='0';hero.classList.remove('hidden');setTimeout(()=>boot.remove(),1000)},1200)},500)}},70);(function a(){x.fillStyle='#02030b';x.fillRect(0,0,c.width,c.height);for(const e of s){e.y+=e.v;if(e.y>c.height){e.y=0;e.x=Math.random()*c.width}e.t+=.03;x.fillStyle=`rgba(255,255,255,${0.4+0.6*Math.sin(e.t)})`;x.beginPath();x.arc(e.x,e.y,e.R,0,6.28);x.fill()}requestAnimationFrame(a)})();
+// Genesis005 Dev Release001
+
+const c=document.getElementById('stars'),
+g=c.getContext('2d'),
+b=document.getElementById('boot'),
+h=document.getElementById('hero');
+function resize(){c.width=innerWidth;c.height=innerHeight;}
+addEventListener('resize',resize);resize();
+const stars=[...Array(1100)].map(()=>({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*2+.2,v:Math.random()*.45+.05,t:Math.random()*Math.PI*2}));
+const meteors=[];
+function spawnMeteor(){meteors.push({x:c.width+200*Math.random(),y:Math.random()*c.height*.5,vx:-12-Math.random()*6,vy:8+Math.random()*4,life:70});}
+setInterval(()=>{if(Math.random()<0.75)spawnMeteor();},6000);
+let floatTime=0;
+(function animate(){
+g.fillStyle='#02030b';g.fillRect(0,0,c.width,c.height);
+for(const s of stars){s.y+=s.v;if(s.y>c.height){s.y=0;s.x=Math.random()*c.width;}s.t+=0.03;const a=.45+.55*Math.sin(s.t);g.fillStyle=`rgba(255,255,255,${a})`;g.beginPath();g.arc(s.x,s.y,s.r,0,Math.PI*2);g.fill();}
+for(let i=meteors.length-1;i>=0;i--){const m=meteors[i];g.strokeStyle=`rgba(180,220,255,${m.life/70})`;g.lineWidth=2;g.beginPath();g.moveTo(m.x,m.y);g.lineTo(m.x-140,m.y+90);g.stroke();m.x+=m.vx;m.y+=m.vy;m.life--;if(m.life<=0)meteors.splice(i,1);}
+if(h&&!h.classList.contains('hidden')){floatTime+=0.015;h.style.transform=`translateY(${Math.sin(floatTime)*5}px)`;}
+requestAnimationFrame(animate);
+})();
+
+/* ==== Genesis 005 Release 002 ==== */
+(function(){
+ let last=0;
+ function flash(){
+   const c=document.getElementById('stars');
+   if(!c)return;
+   const ctx=c.getContext('2d');
+   const w=c.width,h=c.height;
+   const x=Math.random()*w,y=Math.random()*h;
+   ctx.strokeStyle='rgba(180,220,255,.8)';
+   ctx.beginPath();
+   ctx.moveTo(x,y);
+   ctx.lineTo(x-120,y+70);
+   ctx.stroke();
+ }
+ setInterval(flash,12000);
+
+ let t=0;
+ function drift(){
+   const hero=document.getElementById('hero');
+   if(hero){
+      t+=0.01;
+      hero.style.transform='translateY('+Math.sin(t)*4+'px)';
+   }
+   requestAnimationFrame(drift);
+ }
+ requestAnimationFrame(drift);
+})();
+
+
+/* ==== Genesis 005 Release 003 ==== */
+(function(){
+ const title=document.querySelector("h1");
+ if(title){
+   title.classList.add("transmission-glow");
+ }
+
+ const msgs=[
+   "SIGNAL STRENGTH: 100%",
+   "COSMIC LINK STABLE",
+   "WELCOME TO PROJECT // ZRO"
+ ];
+ let i=0;
+ setInterval(()=>{
+   const status=document.querySelector(".status")||document.querySelector("p");
+   if(status){
+      status.textContent=msgs[i%msgs.length];
+      i++;
+   }
+ },5000);
+})();
+
+
+/* ==== Genesis 005.4 Core Engine v1 ==== */
+(function(){
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(prefersReduced) return;
+
+  const hero=document.getElementById('hero');
+  let t=0;
+  function animate(){
+    if(hero){
+      hero.style.transform=`translateY(${Math.sin(t)*3}px)`;
+      hero.style.filter=`drop-shadow(0 0 ${8+Math.sin(t*0.5)*3}px rgba(180,120,255,.35))`;
+    }
+    t+=0.02;
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+})();
