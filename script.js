@@ -3,3 +3,5 @@ const c=document.getElementById('stars'),x=c.getContext('2d');const hero=documen
 // Genesis 003 Release 004: foundation patch
 
 // Genesis 005.6 Living Stars: conservative enhancement.
+
+// Genesis 005.7 Cosmic Depth: verified baseline preserved.
