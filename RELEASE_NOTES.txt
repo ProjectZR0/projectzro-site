@@ -1,9 +1,8 @@
-Genesis Release 005 - Layer Preparation
+Genesis 005.6 - Living Stars
 
-Goal:
-- Prepare star objects for depth layers.
-- No renderer rewrite.
-- No additional animation loops.
+Changes:
+- Slightly broader star size range (when supported by original code).
+- Prepared subtle star color variation.
+- No new animation loops.
 - No new timers.
-
-This release intentionally minimizes risk and preserves the existing engine.
+- No HTML/CSS changes.
