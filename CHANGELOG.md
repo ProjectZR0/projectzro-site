@@ -1,5 +1,4 @@
-# Genesis005 Release011 - First Light
+# Release012 Silent Comets
 
-- Safe renderer preparation.
-- Preserves one render loop.
-- Prepares for integrated meteors.
+- Added rare meteor rendering in existing loop.
+- One active meteor max.
