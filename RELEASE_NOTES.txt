@@ -1,23 +1,4 @@
-Genesis 005.6 - Living Stars
-
-Changes:
-- Slightly broader star size range (when supported by original code).
-- Prepared subtle star color variation.
-- No new animation loops.
-- No new timers.
-- No HTML/CSS changes.
-
-
-Genesis 005.7 - Cosmic Depth
-
-Purpose:
-- Establish the roadmap for renderer evolution.
-- Preserve the existing engine.
-- No new animation loops.
-- No HTML/CSS structure changes.
-
-Next renderer milestones:
-1. Layer-aware stars.
-2. Independent twinkle curves.
-3. Rare meteor system.
-4. Nebula haze.
+Release017 - The Signal
+- Added subtle Project // ZRO emblem overlay.
+- Fade-in after page load.
+- No renderer changes.

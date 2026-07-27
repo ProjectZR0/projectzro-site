@@ -68,3 +68,11 @@ const ZRO_LIVING_NEBULA = {
   maxOpacity:0.045
 };
 // Next renderer update will animate the nebula using the existing render loop.
+
+
+window.addEventListener('load',()=>{
+  const s=document.getElementById('zro-signal');
+  if(s){
+    setTimeout(()=>s.classList.add('visible'),3500);
+  }
+});
