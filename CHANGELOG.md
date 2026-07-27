@@ -10,3 +10,9 @@
 ## Release015 - Living Nebula
 - Added animated nebula configuration scaffold.
 - Preserves renderer architecture.
+
+
+## Release016 Engine Revision
+- Animated drifting nebula.
+- Pulsing primary nebula.
+- Preserved render loop.
