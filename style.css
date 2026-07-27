@@ -34,3 +34,5 @@ transition:opacity 4s ease;
 pointer-events:none;
 }
 .signal-caption.visible{opacity:1;}
+
+#signal-seal{display:flex;justify-content:center;align-items:center;margin:.75rem auto 1.2rem;width:56px;color:rgba(170,220,255,.75);opacity:.85;animation:sealPulse 10s ease-in-out infinite}#signal-seal svg{width:56px;height:56px} @keyframes sealPulse{0%,100%{filter:drop-shadow(0 0 2px rgba(120,190,255,.2));opacity:.7}50%{filter:drop-shadow(0 0 8px rgba(120,190,255,.45));opacity:1}}
