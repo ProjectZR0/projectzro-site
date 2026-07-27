@@ -16,3 +16,15 @@ const ZRO_RENDER_CONFIG = {
 };
 // Future renderer upgrades will consume this configuration
 // while preserving the existing animation loop.
+
+
+/* ==== Genesis005 Release010 - Meteor Framework ==== */
+const ZRO_METEOR_CONFIG = {
+  enabled: true,
+  minInterval: 20000,
+  maxInterval: 40000,
+  trailLength: 140,
+  glow: 0.85
+};
+// Framework only. Integrated meteor rendering comes next
+// using the existing animation loop.
