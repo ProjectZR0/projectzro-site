@@ -2,7 +2,7 @@ const c=document.getElementById('stars'),x=c.getContext('2d');const hero=documen
 
 const meteors=[];
 let nextMeteor=performance.now()+12000+Math.random()*18000;
-const T=setInterval(()=>{boot.textContent=m.slice(0,i++);if(i>m.length){clearInterval(T);setTimeout(()=>{boot.textContent='LOCK ACQUIRED';setTimeout(()=>{boot.style.opacity='0';hero.classList.remove('hidden');setTimeout(()=>boot.remove(),1000)},1200)},500)}},70);(function a(){x.fillStyle='#02030b';x.fillRect(0,0,c.width,c.height);const now=performance.now();
+const T=setInterval(()=>{boot.textContent=m.slice(0,i++);if(i>m.length){clearInterval(T);setTimeout(()=>{boot.textContent='LOCK ACQUIRED';setTimeout(()=>{boot.style.opacity='0';hero.classList.remove('hidden');setTimeout(()=>boot.remove(),1000)},1200)},500)}},70);(function a(){x.fillStyle='#02030b';x.fillRect(0,0,c.width,c.height);x.save();const g=x.createRadialGradient(c.width*0.35,c.height*0.4,0,c.width*0.35,c.height*0.4,c.width*0.9);g.addColorStop(0,'rgba(80,60,140,0.05)');g.addColorStop(0.5,'rgba(40,90,170,0.025)');g.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=g;x.fillRect(0,0,c.width,c.height);const g2=x.createRadialGradient(c.width*0.75,c.height*0.7,0,c.width*0.75,c.height*0.7,c.width*0.8);g2.addColorStop(0,'rgba(180,90,220,0.03)');g2.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=g2;x.fillRect(0,0,c.width,c.height);x.restore();const now=performance.now();
 if(now>nextMeteor&&meteors.length<1){
  meteors.push({x:Math.random()*c.width*0.7,y:Math.random()*c.height*0.4,vx:9+Math.random()*3,vy:4+Math.random()*2,life:0});
  nextMeteor=now+20000+Math.random()*20000;
