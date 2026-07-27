@@ -47,3 +47,13 @@ const ZRO_FIRST_LIGHT={
   starBloom:1.08,
   anchorStarBoost:1.15
 };
+
+
+/* ==== Genesis005 Release013 - Cosmic Haze ==== */
+const ZRO_NEBULA = {
+  enabled: true,
+  opacity: 0.03,
+  driftSpeed: 0.0005,
+  layers: 2
+};
+// Placeholder configuration for subtle background nebula integration.
