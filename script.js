@@ -57,3 +57,14 @@ const ZRO_NEBULA = {
   layers: 2
 };
 // Placeholder configuration for subtle background nebula integration.
+
+
+/* ==== Genesis005 Release015 - Living Nebula ==== */
+const ZRO_LIVING_NEBULA = {
+  enabled:true,
+  pulseSpeed:0.00008,
+  driftX:0.00003,
+  driftY:0.00002,
+  maxOpacity:0.045
+};
+// Next renderer update will animate the nebula using the existing render loop.

@@ -5,3 +5,8 @@
 ## Release014 - Visible Cosmic Haze
 - Added subtle nebula gradients behind stars.
 - No additional animation loops.
+
+
+## Release015 - Living Nebula
+- Added animated nebula configuration scaffold.
+- Preserves renderer architecture.
