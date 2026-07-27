@@ -17,3 +17,20 @@ animation:zroPulse 10s ease-in-out infinite;
 0%,100%{filter:drop-shadow(0 0 4px rgba(180,220,255,.15));opacity:.18;}
 50%{filter:drop-shadow(0 0 10px rgba(180,220,255,.35));opacity:.28;}
 }
+
+
+.signal-caption{
+position:fixed;
+left:50%;
+top:calc(50% + 90px);
+transform:translateX(-50%);
+font-family:system-ui,sans-serif;
+letter-spacing:.35em;
+font-size:.75rem;
+text-transform:uppercase;
+color:rgba(220,230,255,.45);
+opacity:0;
+transition:opacity 4s ease;
+pointer-events:none;
+}
+.signal-caption.visible{opacity:1;}

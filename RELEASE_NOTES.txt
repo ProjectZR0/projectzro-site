@@ -1,4 +1,3 @@
-Release017 - The Signal
-- Added subtle Project // ZRO emblem overlay.
-- Fade-in after page load.
-- No renderer changes.
+Release018 - Identity
+Adds understated PROJECT // ZRO caption beneath the signal.
+No renderer changes.
