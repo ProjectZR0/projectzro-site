@@ -7,7 +7,7 @@ if(now>nextMeteor&&meteors.length<1){
  meteors.push({x:Math.random()*c.width*0.7,y:Math.random()*c.height*0.4,vx:9+Math.random()*3,vy:4+Math.random()*2,life:0});
  nextMeteor=now+20000+Math.random()*20000;
 }
-for(const e of s){e.y+=e.v;if(e.y>c.height){e.y=0;e.x=Math.random()*c.width}e.t+=.02+(e.layer*0.01);const alpha=0.25+0.75*((Math.sin(e.t)+1)/2);x.fillStyle=`rgba(${e.color},${alpha})`;x.beginPath();x.arc(e.x,e.y,e.R,0,6.28);x.fill()}
+for(const e of s){e.y+=e.v;if(e.y>c.height){e.y=0;e.x=Math.random()*c.width}e.t+=.02+(e.layer*0.01);const alpha=0.25+0.75*((Math.sin(e.t)+1)/2);const glow=e.layer===2?e.R*2.8:e.layer===1?e.R*1.8:e.R*1.2;x.shadowBlur=glow;x.shadowColor=`rgba(${e.color},0.45)`;x.fillStyle=`rgba(${e.color},${alpha})`;x.beginPath();x.arc(e.x,e.y,e.R,0,6.28);x.fill();x.shadowBlur=0}
 for(let k=meteors.length-1;k>=0;k--){
  const m=meteors[k];
  m.x+=m.vx; m.y+=m.vy; m.life++;
@@ -16,7 +16,7 @@ for(let k=meteors.length-1;k>=0;k--){
  x.beginPath();
  x.moveTo(m.x,m.y);
  x.lineTo(m.x-60,m.y-30);
- x.stroke();
+ x.shadowBlur=12;x.shadowColor='rgba(180,220,255,0.8)';x.stroke();x.shadowBlur=0;
  if(m.life>70||m.x>c.width+80||m.y>c.height+80) meteors.splice(k,1);
 }
 requestAnimationFrame(a)})();
@@ -68,3 +68,5 @@ const ZRO_LIVING_NEBULA = {
   maxOpacity:0.045
 };
 // Next renderer update will animate the nebula using the existing render loop.
+
+/* Release017 Aurora Bloom */

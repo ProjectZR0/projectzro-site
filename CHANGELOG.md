@@ -16,3 +16,9 @@
 - Animated drifting nebula.
 - Pulsing primary nebula.
 - Preserved render loop.
+
+
+## Release017 Aurora Bloom
+- Added soft bloom to brighter stars.
+- Meteor trails now emit a gentle glow.
+- Maintains single render loop.
