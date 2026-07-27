@@ -18,13 +18,11 @@ const ZRO_RENDER_CONFIG = {
 // while preserving the existing animation loop.
 
 
-/* ==== Genesis005 Release010 - Meteor Framework ==== */
-const ZRO_METEOR_CONFIG = {
-  enabled: true,
-  minInterval: 20000,
-  maxInterval: 40000,
-  trailLength: 140,
-  glow: 0.85
+/* ==== Genesis005 Release011 - First Light ==== */
+const ZRO_FIRST_LIGHT={
+  meteorEnabled:true,
+  meteorChancePerFrame:0.000015,
+  meteorMaxVisible:1,
+  starBloom:1.08,
+  anchorStarBoost:1.15
 };
-// Framework only. Integrated meteor rendering comes next
-// using the existing animation loop.
