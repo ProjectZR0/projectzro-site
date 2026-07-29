@@ -76,3 +76,8 @@ window.addEventListener('load',()=>{
     setTimeout(()=>s.classList.add('visible'),3500);
   }
 });
+
+window.addEventListener('load',()=>{
+ const c=document.querySelector('.signal-caption');
+ if(c){setTimeout(()=>c.classList.add('visible'),5000);}
+});
