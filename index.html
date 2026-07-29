@@ -7,5 +7,21 @@
 </div>
 
 <div class="signal-caption">PROJECT // ZRO</div>
+
+<style>
+body.transitioning{opacity:0;transition:opacity .9s ease;}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+ const enter=[...document.querySelectorAll('a')].find(a=>a.textContent.trim().toUpperCase()==='ENTER');
+ if(enter){
+   enter.addEventListener('click',e=>{
+      e.preventDefault();
+      document.body.classList.add('transitioning');
+      setTimeout(()=>location.href='enter.html',900);
+   });
+ }
+});
+</script>
 </body></html>
 <!-- Release020 scaffold added by ChatGPT -->
