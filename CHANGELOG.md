@@ -23,3 +23,9 @@
 - Added transmission-001.html, transmission-002.html (open, placeholder lore/art scaffold).
 - Added transmission-003.html (locked teaser page for unreleased recovery).
 - No changes to landing page or renderer.
+
+
+## Release022 - Roadmap Regions
+- Added locked placeholder pages: observatory.html, hidden-signals.html, constellations.html.
+- Archive page now has a "Further Regions" section linking to these as LOCKED.
+- No changes to landing page, renderer, or existing transmission pages.
