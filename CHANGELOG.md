@@ -43,3 +43,7 @@
 - Added subtle breathing pulse animation to the cover art on transmission-001.html
   (slow scale + brightness loop, 4s cycle).
 - No changes to other pages.
+
+
+## Release025 - Cover Art Positioning
+- Shifted visible crop of the cover art downward on transmission-001.html.
