@@ -47,3 +47,7 @@
 
 ## Release025 - Cover Art Positioning
 - Shifted visible crop of the cover art downward on transmission-001.html.
+
+
+## Release026 - Cover Art Positioning Fix
+- Reversed direction of cover art crop shift on transmission-001.html.
