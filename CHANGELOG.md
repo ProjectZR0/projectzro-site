@@ -29,3 +29,11 @@
 - Added locked placeholder pages: observatory.html, hidden-signals.html, constellations.html.
 - Archive page now has a "Further Regions" section linking to these as LOCKED.
 - No changes to landing page, renderer, or existing transmission pages.
+
+
+## Release023 - The Only Stars Content
+- transmission-001.html now has full lore text and cover art for The Only Stars.
+- Added clickable tracklist (10 tracks) on transmission-001.html.
+- Added individual song pages (song-01 through song-10) as lyrics/lore scaffolds,
+  each linking back to transmission-001.html and forward to the next track.
+- No changes to landing page, renderer, or other transmission pages.

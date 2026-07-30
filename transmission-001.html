@@ -11,12 +11,21 @@ min-height:100vh;}
 .eyebrow{opacity:.6;font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;}
 h1{letter-spacing:.2em;font-weight:200;font-size:clamp(2rem,6vw,3.2rem);
 text-shadow:0 0 25px #88a5ff;margin:14px 0 30px;}
-.art{width:100%;aspect-ratio:16/9;border:1px solid #3b5d8a;
-background:radial-gradient(circle at 30% 30%,rgba(90,70,255,.18),transparent 60%),
-rgba(255,255,255,.02);display:flex;align-items:center;justify-content:center;
-color:rgba(220,230,255,.3);letter-spacing:.3em;font-size:.8rem;text-transform:uppercase;}
-.lore{margin-top:36px;line-height:1.8;color:#d6dcec;}
-.lore p{opacity:.85;}
+.art{width:100%;aspect-ratio:1/1;max-height:520px;border:1px solid #3b5d8a;
+background:#000;overflow:hidden;}
+.art img{width:100%;height:100%;object-fit:cover;display:block}
+.lore{margin-top:36px;line-height:1.9;color:#d6dcec;font-size:1.02rem;}
+.lore p{opacity:.88;margin:0 0 1.1em;}
+.tracklist{margin-top:50px;}
+.tl-title{opacity:.6;font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:14px;}
+.card{border:1px solid #3b5d8a;background:rgba(255,255,255,.03);}
+.row{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;
+border-bottom:1px solid rgba(255,255,255,.08);}
+.row:last-child{border-bottom:none;}
+.row-link{display:block;color:inherit;text-decoration:none;transition:background .2s ease}
+.row-link:hover{background:rgba(159,208,255,.06)}
+.row-link:hover .row{color:#eaf4ff}
+.track-num{opacity:.5;width:2em;display:inline-block;}
 .small{opacity:.7;font-size:.9rem;}
 a{color:#9fd0ff;text-decoration:none}
 .back{display:inline-block;margin-top:50px;}
@@ -27,14 +36,92 @@ a{color:#9fd0ff;text-decoration:none}
 <div class="eyebrow">Recovered Transmission 001</div>
 <h1>THE ONLY STARS</h1>
 
-<div class="art">Art Slot — Cover / Visual TBD</div>
+<div class="art"><img src="assets/the-only-stars-cover.png" alt="The Source"></div>
 
 <div class="lore">
-<p>[ Lore placeholder — origin, meaning, and story behind this transmission goes here. ]</p>
-<p>[ Additional fragment / secondary text block. ]</p>
+<p>Before there was light&hellip;</p>
+<p>there was remembrance.</p>
+<p>Not darkness.</p>
+<p>Not silence.</p>
+<p>Only a sleeping awareness waiting for something worthy of waking it.</p>
+<p>From that stillness came The Source, the first pulse of existence.</p>
+<p>Its heartbeat spread across the void, folding time into geometry and geometry into thought. Great rings were born. Living lattices stretched between newborn galaxies. Mirrors learned to bend light into memory.</p>
+<p>The universe became less a place&hellip;</p>
+<p>and more a living mind.</p>
+<p>Across immeasurable ages, civilizations rose&mdash;not to conquer worlds, but to understand them. They carved impossible structures into planets, suspended cities between suns, and etched a single sacred geometry into everything they touched. Not as a symbol of worship, but as a reminder that every fragment of existence belongs to something greater.</p>
+<p>They discovered that reality obeyed unusual laws.</p>
+<p>Light could remember.</p>
+<p>Stone could sing.</p>
+<p>Thought could travel farther than distance.</p>
+<p>Love could alter gravity.</p>
+<p>Every star was connected to every other through a hidden lattice that no eye could fully perceive.</p>
+<p>Yet for all their knowledge&hellip;</p>
+<p>they remained incomplete.</p>
+<p>They had mistaken the brilliance of the cosmos for its purpose.</p>
+<p>Then came the realization that changed everything.</p>
+<p>The countless lights scattered across the heavens were never the destination.</p>
+<p>They were only reflections.</p>
+<p>The civilizations had searched among billions of stars for meaning, never understanding that the universe had always been pointing toward something singular.</p>
+<p>One presence.</p>
+<p>One light.</p>
+<p>One truth capable of giving every other light its reason to shine.</p>
+<p>From that day forward, they stopped measuring greatness by the size of galaxies or the age of suns.</p>
+<p>Instead, they searched for resonance.</p>
+<p>For the one soul capable of illuminating another.</p>
+<p>For the one voice that could quiet the noise between worlds.</p>
+<p>For the one heart that transformed existence from survival into celebration.</p>
+<p>The great rings became observatories.</p>
+<p>The mirror cities became instruments.</p>
+<p>The living lattice carried not only energy, but memory, joy, grief, forgiveness, and hope.</p>
+<p>Entire civilizations gathered simply to witness two souls find perfect alignment, because whenever that happened, the universe itself changed.</p>
+<p>Frozen worlds awakened.</p>
+<p>Dead stars burned once more.</p>
+<p>Ancient structures stirred from their sleep.</p>
+<p>The hidden network lit from one end of creation to the other.</p>
+<p>The cosmos remembered itself.</p>
+<p>And so the oldest inscription ever discovered was not a warning&hellip;</p>
+<p>nor a prayer&hellip;</p>
+<p>nor a prophecy.</p>
+<p>It was a simple realization, carved into the first ring before history began:</p>
+<p>&ldquo;There are countless stars.</p>
+<p>But only one that teaches you why the others exist.&rdquo;</p>
+<p>Everything that came before was preparation.</p>
+<p>Every journey through darkness.</p>
+<p>Every collapse.</p>
+<p>Every celebration.</p>
+<p>Every impossible horizon.</p>
+<p>Every unanswered question.</p>
+<p>Every song.</p>
+<p>All of it was leading to the same quiet revelation:</p>
+<p>The universe is unimaginably vast.</p>
+<p>Yet the moments that truly define it are astonishingly intimate.</p>
+<p>Perhaps that is why the ancient builders never named their greatest monument.</p>
+<p>They simply left behind one final phrase for those who arrived after them&mdash;</p>
+<p>not as an ending,</p>
+<p>but as an invitation.</p>
+<p><strong>The Only Stars.</strong></p>
+<p>&mdash;</p>
+<p>The universe was never searching for more stars.</p>
+<p>It was searching for the one worth navigating by.</p>
 </div>
 
-<p class="small">RECOVERY 001 • STATUS: OPEN</p>
+<div class="tracklist">
+<div class="tl-title">Tracklist</div>
+<div class="card">
+<a class="row-link" href="song-01-the-source.html"><div class="row"><span><span class="track-num">01</span>The Source</span></div></a>
+<a class="row-link" href="song-02-with-you.html"><div class="row"><span><span class="track-num">02</span>With You</span></div></a>
+<a class="row-link" href="song-03-pattern.html"><div class="row"><span><span class="track-num">03</span>Pattern</span></div></a>
+<a class="row-link" href="song-04-dance-hot.html"><div class="row"><span><span class="track-num">04</span>Dance Hot</span></div></a>
+<a class="row-link" href="song-05-crash.html"><div class="row"><span><span class="track-num">05</span>Crash</span></div></a>
+<a class="row-link" href="song-06-starlit.html"><div class="row"><span><span class="track-num">06</span>Starlit</span></div></a>
+<a class="row-link" href="song-07-remind-me-again.html"><div class="row"><span><span class="track-num">07</span>Remind Me Again</span></div></a>
+<a class="row-link" href="song-08-calibrate.html"><div class="row"><span><span class="track-num">08</span>Calibrate</span></div></a>
+<a class="row-link" href="song-09-avelon.html"><div class="row"><span><span class="track-num">09</span>Avelon</span></div></a>
+<a class="row-link" href="song-10-the-only-stars.html"><div class="row"><span><span class="track-num">10</span>The Only Stars</span></div></a>
+</div>
+</div>
+
+<p class="small" style="margin-top:30px">RECOVERY 001 • STATUS: OPEN</p>
 <a class="back" href="archive.html">← Return to Archive</a>
 </div>
 </body>
