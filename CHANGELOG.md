@@ -37,3 +37,9 @@
 - Added individual song pages (song-01 through song-10) as lyrics/lore scaffolds,
   each linking back to transmission-001.html and forward to the next track.
 - No changes to landing page, renderer, or other transmission pages.
+
+
+## Release024 - Cover Art Pulse
+- Added subtle breathing pulse animation to the cover art on transmission-001.html
+  (slow scale + brightness loop, 4s cycle).
+- No changes to other pages.
