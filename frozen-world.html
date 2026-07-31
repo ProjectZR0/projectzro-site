@@ -6,39 +6,36 @@
 <title>PROJECT // ZRO — Frozen World</title>
 <style>
 body{margin:0;color:#dcecff;font-family:Arial,sans-serif;
-min-height:100vh;display:flex;align-items:center;justify-content:center;
-overflow:hidden;position:relative;
-background:linear-gradient(180deg,#050914 0%,#0a1424 55%,#0e1c30 100%);}
-.horizon{position:absolute;left:0;right:0;bottom:0;height:38%;
-background:linear-gradient(180deg,rgba(120,160,220,.08),rgba(10,20,40,.9));
-border-top:1px solid rgba(150,190,255,.15);}
-.frost{position:absolute;inset:0;background-image:
-radial-gradient(1px 1px at 20% 20%, rgba(255,255,255,.4), transparent),
-radial-gradient(1px 1px at 60% 40%, rgba(255,255,255,.3), transparent),
-radial-gradient(1px 1px at 80% 15%, rgba(255,255,255,.4), transparent),
-radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,.3), transparent);
-background-size:260px 260px;opacity:.5;}
-.wrap{position:relative;width:min(600px,85vw);text-align:center;padding:60px 0;z-index:2;}
-.shard{width:0;height:0;margin:0 auto 30px;
-border-left:22px solid transparent;border-right:22px solid transparent;
-border-bottom:60px solid rgba(160,200,255,.15);
-filter:drop-shadow(0 0 20px rgba(140,190,255,.25));
-animation:shimmer 5s ease-in-out infinite;}
-@keyframes shimmer{0%,100%{opacity:.6}50%{opacity:1}}
-.eyebrow{opacity:.5;font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;}
+min-height:100vh;overflow:hidden;position:relative;}
+.bg{position:fixed;inset:0;
+background:url('assets/frozen-world-bg.png') center center / cover no-repeat;}
+.shade{position:fixed;inset:0;
+background:linear-gradient(180deg,rgba(2,4,10,.35) 0%,rgba(2,4,10,.15) 35%,rgba(2,4,10,.65) 100%);}
+.twinkle{position:fixed;inset:0;pointer-events:none;}
+.twinkle span{position:absolute;border-radius:50%;background:#fff;
+animation:tw 3s ease-in-out infinite;}
+@keyframes tw{0%,100%{opacity:.15}50%{opacity:.95}}
+.wrap{position:relative;z-index:2;min-height:100vh;display:flex;
+align-items:flex-end;justify-content:center;text-align:center;padding:0 0 70px;}
+.inner{width:min(600px,85vw);}
+.eyebrow{opacity:.6;font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;
+text-shadow:0 2px 12px rgba(0,0,0,.8);}
 h1{letter-spacing:.15em;font-weight:200;font-size:clamp(1.6rem,5vw,2.4rem);
-color:rgba(220,236,255,.65);margin:16px 0 26px;}
-.msg{opacity:.55;line-height:1.9;letter-spacing:.03em;font-size:1rem;}
-.small{opacity:.4;font-size:.85rem;margin-top:36px;letter-spacing:.2em;text-transform:uppercase;}
+color:rgba(220,236,255,.9);margin:16px 0 20px;text-shadow:0 2px 20px rgba(0,0,0,.9);}
+.msg{opacity:.8;line-height:1.9;letter-spacing:.03em;font-size:1rem;
+text-shadow:0 2px 14px rgba(0,0,0,.9);}
+.small{opacity:.55;font-size:.85rem;margin-top:30px;letter-spacing:.2em;
+text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,.9);}
 a{color:#9fd0ff;text-decoration:none}
-.back{display:inline-block;margin-top:50px;}
+.back{display:inline-block;margin-top:34px;text-shadow:0 2px 10px rgba(0,0,0,.9);}
 </style>
 </head>
 <body>
-<div class="frost"></div>
-<div class="horizon"></div>
+<div class="bg"></div>
+<div class="shade"></div>
+<div class="twinkle" id="twinkle"></div>
 <div class="wrap">
-<div class="shard"></div>
+<div class="inner">
 <div class="eyebrow">Coordinates Resolved</div>
 <h1>A FROZEN WORLD</h1>
 <p class="msg">Ice fields under a sky that never warms.<br>
@@ -46,5 +43,21 @@ Something was built here once. It has been silent for a long time.</p>
 <p class="small">STATUS: UNCHARTED</p>
 <a class="back" href="index.html">← Attempt Reconnection</a>
 </div>
+</div>
+<script>
+const layer=document.getElementById('twinkle');
+const n=45;
+for(let i=0;i<n;i++){
+  const s=document.createElement('span');
+  const size=Math.random()*1.6+0.6;
+  s.style.width=size+'px';
+  s.style.height=size+'px';
+  s.style.left=(Math.random()*100)+'%';
+  s.style.top=(Math.random()*58)+'%'; // sky region only
+  s.style.animationDuration=(2+Math.random()*3)+'s';
+  s.style.animationDelay=(Math.random()*4)+'s';
+  layer.appendChild(s);
+}
+</script>
 </body>
 </html>

@@ -82,3 +82,11 @@
 - WARP_DESTINATIONS in index.html now includes void.html, adrift.html, frozen-world.html —
   warp clicks are now genuinely random across three outcomes.
 - Pool remains a simple array for easy future expansion (e.g. lyrics/art pages).
+
+
+## Release031 - Frozen World Imagery
+- frozen-world.html now uses a real background photo (assets/frozen-world-bg.png)
+  instead of CSS gradient/shard placeholder.
+- Added a subtle twinkling star overlay (45 small stars, randomized position/timing,
+  confined to the upper sky region of the image) layered on top of the photo.
+- Text now sits at the bottom with a shadow/gradient for legibility against the image.
