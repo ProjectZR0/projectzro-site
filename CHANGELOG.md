@@ -90,3 +90,10 @@
 - Added a subtle twinkling star overlay (45 small stars, randomized position/timing,
   confined to the upper sky region of the image) layered on top of the photo.
 - Text now sits at the bottom with a shadow/gradient for legibility against the image.
+
+
+## Release032 - Frozen World Mobile Fix
+- Removed overflow:hidden and fixed-bottom pinning that cut off the back link
+  on mobile (shorter viewport + browser chrome hid content with no way to scroll).
+- Page now scrolls normally; back link always reachable.
+- Added safe-area-inset padding for phones with home indicator bars.

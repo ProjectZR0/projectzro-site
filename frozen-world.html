@@ -6,7 +6,7 @@
 <title>PROJECT // ZRO — Frozen World</title>
 <style>
 body{margin:0;color:#dcecff;font-family:Arial,sans-serif;
-min-height:100vh;overflow:hidden;position:relative;}
+min-height:100vh;position:relative;}
 .bg{position:fixed;inset:0;
 background:url('assets/frozen-world-bg.png') center center / cover no-repeat;}
 .shade{position:fixed;inset:0;
@@ -16,7 +16,8 @@ background:linear-gradient(180deg,rgba(2,4,10,.35) 0%,rgba(2,4,10,.15) 35%,rgba(
 animation:tw 3s ease-in-out infinite;}
 @keyframes tw{0%,100%{opacity:.15}50%{opacity:.95}}
 .wrap{position:relative;z-index:2;min-height:100vh;display:flex;
-align-items:flex-end;justify-content:center;text-align:center;padding:0 0 70px;}
+align-items:flex-end;justify-content:center;text-align:center;
+padding:40px 0 max(70px,env(safe-area-inset-bottom));}
 .inner{width:min(600px,85vw);}
 .eyebrow{opacity:.6;font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;
 text-shadow:0 2px 12px rgba(0,0,0,.8);}
