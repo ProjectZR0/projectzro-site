@@ -59,3 +59,9 @@
 - Added rare hidden-constellation effect: every few minutes, a handful of
   nearby stars faintly connect with thin lines for several seconds, then fade.
 - Fully additive: existing star field, meteor system, and render loop untouched.
+
+
+## Release028 - Deep Field Visibility Pass
+- Increased amber nebula, dust particle, and constellation line intensity.
+- Constellation effect now first appears within ~5-15s instead of 30s-2min (for visibility testing).
+- Bumped script.js cache-busting version on index.html.

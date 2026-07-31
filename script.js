@@ -28,13 +28,13 @@ requestAnimationFrame(a)})();
 const dust=[...Array(90)].map(()=>({
   x:Math.random()*c.width,
   y:Math.random()*c.height,
-  R:Math.random()*0.7+0.2,
+  R:Math.random()*1.1+0.4,
   vx:(Math.random()-0.5)*0.04,
   vy:(Math.random()-0.5)*0.04,
-  a:Math.random()*0.15+0.03
+  a:Math.random()*0.3+0.1
 }));
 
-let constellationTimer=performance.now()+30000+Math.random()*90000;
+let constellationTimer=performance.now()+5000+Math.random()*10000;
 let activeConstellation=null;
 
 function drawDeepField(){
@@ -45,7 +45,7 @@ function drawDeepField(){
   const nx3=c.width*(0.15+Math.sin(drift3*0.5)*0.025),
         ny3=c.height*(0.85+Math.cos(drift3*0.4)*0.02);
   const g3=x.createRadialGradient(nx3,ny3,0,nx3,ny3,c.width*0.7);
-  const pulse3=0.02+0.015*((Math.sin(drift3*1.5)+1)/2);
+  const pulse3=0.05+0.035*((Math.sin(drift3*1.5)+1)/2);
   g3.addColorStop(0,`rgba(200,120,90,${pulse3})`);
   g3.addColorStop(1,'rgba(0,0,0,0)');
   x.fillStyle=g3;
@@ -83,8 +83,8 @@ function drawDeepField(){
       activeConstellation=null;
     } else {
       const fade=age<1500?age/1500:(age>life-1500?(life-age)/1500:1);
-      x.strokeStyle=`rgba(150,190,255,${0.18*fade})`;
-      x.lineWidth=1;
+      x.strokeStyle=`rgba(150,190,255,${0.35*fade})`;
+      x.lineWidth=1.2;
       x.beginPath();
       const pts=activeConstellation.stars;
       x.moveTo(pts[0].x,pts[0].y);
