@@ -97,3 +97,14 @@
   on mobile (shorter viewport + browser chrome hid content with no way to scroll).
 - Page now scrolls normally; back link always reachable.
 - Added safe-area-inset padding for phones with home indicator bars.
+
+
+## Release033 - Adrift Imagery
+- adrift.html now uses a real background photo (assets/adrift-bg.png)
+  instead of CSS orb/gradient placeholder.
+- Aggressive twinkle: 110 stars, fast random cycles (0.8-2.4s), full-screen
+  coverage (not confined to a sky region) for a more disorienting, lost feel.
+- Subtle slow drift on the background image itself (50s ease-in-out loop,
+  gentle pan + scale) for a weightless floating sensation.
+- Built with scroll-safe layout from the start (no overflow:hidden pinning,
+  safe-area padding) to avoid the mobile cutoff issue from frozen-world.html.
