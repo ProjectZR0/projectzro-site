@@ -65,3 +65,12 @@
 - Increased amber nebula, dust particle, and constellation line intensity.
 - Constellation effect now first appears within ~5-15s instead of 30s-2min (for visibility testing).
 - Bumped script.js cache-busting version on index.html.
+
+
+## Release029 - Warp Button
+- Circle symbol on landing page is now clickable ("warp" interaction).
+- Click triggers a zoom-into-the-circle transition (1.6s) with a white flash,
+  then navigates to a random destination from WARP_DESTINATIONS in index.html.
+- Added void.html: "Signal Lost" page, currently the only destination in the pool.
+- Destination pool is intentionally minimal for now — expand WARP_DESTINATIONS
+  array in index.html to add more locations later.

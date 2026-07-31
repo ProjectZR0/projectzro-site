@@ -10,6 +10,18 @@
 
 <style>
 body.transitioning{opacity:0;transition:opacity .9s ease;}
+.symbol{cursor:pointer;}
+.symbol.warping{animation:warpZoom 1.6s cubic-bezier(.6,0,.9,1) forwards;}
+@keyframes warpZoom{
+0%{transform:scale(1);opacity:1;}
+70%{opacity:1;}
+100%{transform:scale(45);opacity:0;}
+}
+body.warp-flash{animation:warpFlash 1.6s ease forwards;}
+@keyframes warpFlash{
+0%,60%{background:#02030b;}
+100%{background:#fff;}
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
@@ -19,6 +31,22 @@ document.addEventListener('DOMContentLoaded',()=>{
       e.preventDefault();
       document.body.classList.add('transitioning');
       setTimeout(()=>location.href='enter.html',900);
+   });
+ }
+
+ // Warp button: click the circle for a random chance of drifting elsewhere.
+ // Destination pool is intentionally small for now — add more paths here later.
+ const WARP_DESTINATIONS = ['void.html'];
+ const symbol=document.querySelector('.symbol');
+ if(symbol){
+   symbol.addEventListener('click',()=>{
+     if(symbol.classList.contains('warping'))return;
+     symbol.classList.add('warping');
+     document.body.classList.add('warp-flash');
+     setTimeout(()=>{
+       const dest=WARP_DESTINATIONS[Math.floor(Math.random()*WARP_DESTINATIONS.length)];
+       location.href=dest;
+     },1600);
    });
  }
 });
