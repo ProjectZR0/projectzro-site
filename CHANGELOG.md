@@ -51,3 +51,11 @@
 
 ## Release026 - Cover Art Positioning Fix
 - Reversed direction of cover art crop shift on transmission-001.html.
+
+
+## Release027 - Deep Field
+- Added a third nebula layer (warm amber-rose tone, opposite corner drift).
+- Added ambient dust particle layer (90 dim, slow-drifting motes).
+- Added rare hidden-constellation effect: every few minutes, a handful of
+  nearby stars faintly connect with thin lines for several seconds, then fade.
+- Fully additive: existing star field, meteor system, and render loop untouched.

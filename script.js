@@ -21,6 +21,81 @@ for(let k=meteors.length-1;k>=0;k--){
 }
 requestAnimationFrame(a)})();
 
+/* ==== Genesis005 Release027 - Deep Field ==== */
+// Third nebula layer, ambient dust particles, and rare hidden-constellation flicker.
+// Additive only: does not modify the existing render loop, star array, or meteor system.
+
+const dust=[...Array(90)].map(()=>({
+  x:Math.random()*c.width,
+  y:Math.random()*c.height,
+  R:Math.random()*0.7+0.2,
+  vx:(Math.random()-0.5)*0.04,
+  vy:(Math.random()-0.5)*0.04,
+  a:Math.random()*0.15+0.03
+}));
+
+let constellationTimer=performance.now()+30000+Math.random()*90000;
+let activeConstellation=null;
+
+function drawDeepField(){
+  const now=performance.now();
+  const drift3=now*0.00005;
+
+  // third nebula layer, warm amber-rose, opposite corner drift
+  const nx3=c.width*(0.15+Math.sin(drift3*0.5)*0.025),
+        ny3=c.height*(0.85+Math.cos(drift3*0.4)*0.02);
+  const g3=x.createRadialGradient(nx3,ny3,0,nx3,ny3,c.width*0.7);
+  const pulse3=0.02+0.015*((Math.sin(drift3*1.5)+1)/2);
+  g3.addColorStop(0,`rgba(200,120,90,${pulse3})`);
+  g3.addColorStop(1,'rgba(0,0,0,0)');
+  x.fillStyle=g3;
+  x.fillRect(0,0,c.width,c.height);
+
+  // dust particles
+  for(const d of dust){
+    d.x+=d.vx; d.y+=d.vy;
+    if(d.x<0)d.x=c.width; if(d.x>c.width)d.x=0;
+    if(d.y<0)d.y=c.height; if(d.y>c.height)d.y=0;
+    x.fillStyle=`rgba(210,220,255,${d.a})`;
+    x.beginPath();
+    x.arc(d.x,d.y,d.R,0,6.28);
+    x.fill();
+  }
+
+  // rare hidden constellation
+  if(now>constellationTimer && !activeConstellation){
+    const bright=s.filter(st=>st.layer>=1);
+    if(bright.length>5){
+      const cx=Math.random()*c.width, cy=Math.random()*c.height;
+      const nearby=bright
+        .map(st=>({st,d:Math.hypot(st.x-cx,st.y-cy)}))
+        .sort((a,b)=>a.d-b.d)
+        .slice(0,4+Math.floor(Math.random()*2))
+        .map(o=>o.st);
+      activeConstellation={stars:nearby,born:now,duration:6000+Math.random()*3000};
+    }
+    constellationTimer=now+90000+Math.random()*120000;
+  }
+  if(activeConstellation){
+    const age=now-activeConstellation.born;
+    const life=activeConstellation.duration;
+    if(age>life){
+      activeConstellation=null;
+    } else {
+      const fade=age<1500?age/1500:(age>life-1500?(life-age)/1500:1);
+      x.strokeStyle=`rgba(150,190,255,${0.18*fade})`;
+      x.lineWidth=1;
+      x.beginPath();
+      const pts=activeConstellation.stars;
+      x.moveTo(pts[0].x,pts[0].y);
+      for(let p=1;p<pts.length;p++) x.lineTo(pts[p].x,pts[p].y);
+      x.stroke();
+    }
+  }
+  requestAnimationFrame(drawDeepField);
+}
+drawDeepField();
+
 // Genesis 003 Release 004: foundation patch
 
 // Genesis 005.6 Living Stars: conservative enhancement.
