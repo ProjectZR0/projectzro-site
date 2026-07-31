@@ -74,3 +74,11 @@
 - Added void.html: "Signal Lost" page, currently the only destination in the pool.
 - Destination pool is intentionally minimal for now — expand WARP_DESTINATIONS
   array in index.html to add more locations later.
+
+
+## Release030 - Warp Pool Expansion
+- Added adrift.html ("floating in space" destination) and frozen-world.html
+  ("frozen cosmic world" destination).
+- WARP_DESTINATIONS in index.html now includes void.html, adrift.html, frozen-world.html —
+  warp clicks are now genuinely random across three outcomes.
+- Pool remains a simple array for easy future expansion (e.g. lyrics/art pages).

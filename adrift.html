@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PROJECT // ZRO — Adrift</title>
+<style>
+body{margin:0;background:#02030b;color:#d9ecff;font-family:Arial,sans-serif;
+min-height:100vh;display:flex;align-items:center;justify-content:center;
+overflow:hidden;position:relative;}
+.stars{position:absolute;inset:0;background-image:
+radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,.5), transparent),
+radial-gradient(1px 1px at 65% 55%, rgba(255,255,255,.35), transparent),
+radial-gradient(1px 1px at 35% 75%, rgba(255,255,255,.4), transparent),
+radial-gradient(2px 2px at 80% 15%, rgba(255,255,255,.55), transparent),
+radial-gradient(1px 1px at 5% 60%, rgba(255,255,255,.3), transparent),
+radial-gradient(1px 1px at 50% 10%, rgba(255,255,255,.45), transparent),
+radial-gradient(1px 1px at 90% 85%, rgba(255,255,255,.35), transparent);
+background-size:340px 340px;opacity:.7;
+animation:driftStars 90s linear infinite;}
+@keyframes driftStars{0%{background-position:0 0}100%{background-position:-340px 200px}}
+.wrap{position:relative;width:min(600px,85vw);text-align:center;padding:60px 0;}
+.orb{width:50px;height:50px;margin:0 auto 34px;border-radius:50%;
+background:radial-gradient(circle at 35% 30%,rgba(180,210,255,.5),rgba(60,90,160,.15) 60%,transparent 70%);
+box-shadow:0 0 40px rgba(140,180,255,.35);
+animation:driftOrb 7s ease-in-out infinite;}
+@keyframes driftOrb{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+.eyebrow{opacity:.5;font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;}
+h1{letter-spacing:.15em;font-weight:200;font-size:clamp(1.6rem,5vw,2.4rem);
+color:rgba(217,236,255,.6);margin:16px 0 26px;}
+.msg{opacity:.55;line-height:1.9;letter-spacing:.03em;font-size:1rem;}
+.small{opacity:.4;font-size:.85rem;margin-top:36px;letter-spacing:.2em;text-transform:uppercase;}
+a{color:#9fd0ff;text-decoration:none}
+.back{display:inline-block;margin-top:50px;}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<div class="wrap">
+<div class="orb"></div>
+<div class="eyebrow">No Coordinates Found</div>
+<h1>ADRIFT</h1>
+<p class="msg">No ground. No gravity. No signal to follow.<br>
+Just distance, and the quiet of everything.</p>
+<p class="small">STATUS: FLOATING</p>
+<a class="back" href="index.html">← Attempt Reconnection</a>
+</div>
+</body>
+</html>

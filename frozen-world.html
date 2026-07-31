@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PROJECT // ZRO — Frozen World</title>
+<style>
+body{margin:0;color:#dcecff;font-family:Arial,sans-serif;
+min-height:100vh;display:flex;align-items:center;justify-content:center;
+overflow:hidden;position:relative;
+background:linear-gradient(180deg,#050914 0%,#0a1424 55%,#0e1c30 100%);}
+.horizon{position:absolute;left:0;right:0;bottom:0;height:38%;
+background:linear-gradient(180deg,rgba(120,160,220,.08),rgba(10,20,40,.9));
+border-top:1px solid rgba(150,190,255,.15);}
+.frost{position:absolute;inset:0;background-image:
+radial-gradient(1px 1px at 20% 20%, rgba(255,255,255,.4), transparent),
+radial-gradient(1px 1px at 60% 40%, rgba(255,255,255,.3), transparent),
+radial-gradient(1px 1px at 80% 15%, rgba(255,255,255,.4), transparent),
+radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,.3), transparent);
+background-size:260px 260px;opacity:.5;}
+.wrap{position:relative;width:min(600px,85vw);text-align:center;padding:60px 0;z-index:2;}
+.shard{width:0;height:0;margin:0 auto 30px;
+border-left:22px solid transparent;border-right:22px solid transparent;
+border-bottom:60px solid rgba(160,200,255,.15);
+filter:drop-shadow(0 0 20px rgba(140,190,255,.25));
+animation:shimmer 5s ease-in-out infinite;}
+@keyframes shimmer{0%,100%{opacity:.6}50%{opacity:1}}
+.eyebrow{opacity:.5;font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;}
+h1{letter-spacing:.15em;font-weight:200;font-size:clamp(1.6rem,5vw,2.4rem);
+color:rgba(220,236,255,.65);margin:16px 0 26px;}
+.msg{opacity:.55;line-height:1.9;letter-spacing:.03em;font-size:1rem;}
+.small{opacity:.4;font-size:.85rem;margin-top:36px;letter-spacing:.2em;text-transform:uppercase;}
+a{color:#9fd0ff;text-decoration:none}
+.back{display:inline-block;margin-top:50px;}
+</style>
+</head>
+<body>
+<div class="frost"></div>
+<div class="horizon"></div>
+<div class="wrap">
+<div class="shard"></div>
+<div class="eyebrow">Coordinates Resolved</div>
+<h1>A FROZEN WORLD</h1>
+<p class="msg">Ice fields under a sky that never warms.<br>
+Something was built here once. It has been silent for a long time.</p>
+<p class="small">STATUS: UNCHARTED</p>
+<a class="back" href="index.html">← Attempt Reconnection</a>
+</div>
+</body>
+</html>
