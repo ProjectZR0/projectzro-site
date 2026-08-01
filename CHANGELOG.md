@@ -157,3 +157,12 @@
 - song-02-with-you.html now has full lyrics, faint background art (assets/song-02-bg.png,
   34% opacity), and a glowing traced-line overlay (assets/song-02-bg-lines.png,
   same edge-detection + noise cleanup + pulse treatment as song-01).
+
+
+## Release041 - Pattern (Alive Treatment)
+- song-03-pattern.html: full lyrics, background art (assets/song-03-bg.png) and
+  traced glow lines (assets/song-03-bg-lines.png) tuned for this denser lattice image
+  (lower Canny thresholds so more of the network/circle structure survives).
+- More "alive" than previous songs per request: background opacity raised to ~50%
+  with a slow 9s breathing zoom, and the line-glow pulse sped up and intensified
+  (3.2s cycle, 42-85% opacity) instead of the slower/subtler treatment used before.
