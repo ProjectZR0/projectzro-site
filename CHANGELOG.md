@@ -143,3 +143,11 @@
 - Increased background art opacity on song-01-the-source.html (16% → 34%)
   and lightened the dark shade gradient slightly to compensate, so the scene
   reads more clearly while lyrics stay legible.
+
+
+## Release039 - Traced Line Overlay
+- Generated a glowing edge-trace layer from the background art (edge detection +
+  noise cleanup + soft glow), isolating the strong structural lines (spires,
+  central beam, ring city, triangle/circle symbol) while suppressing star/texture noise.
+- Added assets/song-01-bg-lines.png, layered above the shade with mix-blend-mode:screen
+  and a slow 6s breathing pulse, so the traced lines softly glow brighter and dimmer.
