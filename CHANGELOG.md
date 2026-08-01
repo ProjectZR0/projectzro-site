@@ -108,3 +108,11 @@
   gentle pan + scale) for a weightless floating sensation.
 - Built with scroll-safe layout from the start (no overflow:hidden pinning,
   safe-area padding) to avoid the mobile cutoff issue from frozen-world.html.
+
+
+## Release034 - Adrift Variants
+- Added adrift-2.html and adrift-3.html, two more "floating in space" outcomes
+  with different background photos (assets/adrift-2-bg.png, assets/adrift-3-bg.png).
+- Same treatment as adrift.html: aggressive full-screen twinkle, subtle background drift,
+  scroll-safe layout.
+- WARP_DESTINATIONS in index.html now has 5 outcomes: void, 3 adrift variants, frozen-world.
