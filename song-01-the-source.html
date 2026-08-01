@@ -5,13 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PROJECT // ZRO — The Source</title>
 <style>
-body{margin:0;background:#05070c;color:#d9ecff;font-family:Arial,sans-serif;
-min-height:100vh;}
-.wrap{width:min(700px,90vw);margin:0 auto;padding:60px 0;}
+body{margin:0;color:#d9ecff;font-family:Arial,sans-serif;min-height:100vh;position:relative;}
+.bg{position:fixed;inset:0;
+background:url('assets/song-01-bg.png') center 20% / cover no-repeat;
+opacity:.16;}
+.shade{position:fixed;inset:0;
+background:linear-gradient(180deg,#05070c 0%,rgba(5,7,12,.85) 15%,rgba(5,7,12,.9) 100%);}
+.wrap{position:relative;z-index:2;width:min(700px,90vw);margin:0 auto;padding:60px 0;}
 .eyebrow{opacity:.6;font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;}
 h1{letter-spacing:.2em;font-weight:200;font-size:clamp(1.8rem,5vw,2.6rem);
 text-shadow:0 0 25px #88a5ff;margin:14px 0 30px;}
-.lyrics{margin-top:30px;line-height:1.9;color:#d6dcec;opacity:.75;white-space:pre-line;}
+.lyrics{margin-top:30px;line-height:1.9;color:#d6dcec;opacity:.85;white-space:pre-line;}
+.lyrics p{margin:0 0 1.6em;}
 .small{opacity:.7;font-size:.9rem;}
 a{color:#9fd0ff;text-decoration:none}
 .back{display:inline-block;margin-top:50px;}
@@ -19,26 +24,57 @@ a{color:#9fd0ff;text-decoration:none}
 </style>
 </head>
 <body>
+<div class="bg"></div>
+<div class="shade"></div>
 <div class="wrap">
 <div class="eyebrow">The Only Stars — Track 01</div>
 <h1>The Source</h1>
 
-<div class="lyrics">Crawl into you
+<div class="lyrics">
+<p>Crawl into you
+Set sail into view
+Drop the mast against the grain
+Turn dark
+And let love commence</p>
+
+<p>Into your chest I beat the rhythm of blades
+Cast into seas we can't see in our minds
+So vast
+Vast like a dream that always takes its time
+Frozen, the source has shown itself</p>
+
+<p>Crawl into you
 Set sail into view
 Drop the mast against the grain
 One heart
-Is all we need to test
+Is all we need to test</p>
 
-For you I dream in spades
+<p>For you I dream in spades
 Along contrails winding through our veins
 So fast
 Like a comet buried in our past
 Let loose
 To bring its frozen flame
-To blast
+To blast</p>
 
-Frozen,
-the source has shown itself.</div>
+<p>This thing into the past&hellip;
+To fast for me to see at last&hellip;
+To ask for things I cannot chance&hellip;
+What ever will you see for me&hellip;
+A little bit of chemistry</p>
+
+<p>Crawl into you
+Set sail into view
+Drop the mast against the grain
+One heart
+Is all we need to test</p>
+
+<p>Crawl into you
+Set sail into view
+Drop the mast against the grain
+One heart
+Is all we need to test</p>
+</div>
 
 <p class="small" style="margin-top:30px"></p>
 <a class="back" href="transmission-001.html">← Return to The Only Stars</a>

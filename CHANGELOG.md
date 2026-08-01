@@ -130,3 +130,10 @@
 
 ## Release036 - The Source Lyrics
 - Added full lyrics to song-01-the-source.html.
+
+
+## Release037 - The Source Full Lyrics + Background Art
+- Replaced excerpt with complete lyrics on song-01-the-source.html, with proper
+  stanza spacing preserved from the source document.
+- Added the concept scene image (assets/song-01-bg.png) as a faint, fixed
+  background (16% opacity, dark gradient shade on top for legibility).
