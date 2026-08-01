@@ -126,3 +126,7 @@
 - Separate irregular "glitch" flicker (9s cycle, brief flashes near the 93-96% mark)
   layered on top, so it periodically glitches in and out rather than pulsing smoothly.
 - Does not affect the warp click/zoom behavior, which still targets .symbol.
+
+
+## Release036 - The Source Lyrics
+- Added full lyrics to song-01-the-source.html.
