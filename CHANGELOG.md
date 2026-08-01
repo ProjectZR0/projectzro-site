@@ -151,3 +151,9 @@
   central beam, ring city, triangle/circle symbol) while suppressing star/texture noise.
 - Added assets/song-01-bg-lines.png, layered above the shade with mix-blend-mode:screen
   and a slow 6s breathing pulse, so the traced lines softly glow brighter and dimmer.
+
+
+## Release040 - With You Full Treatment
+- song-02-with-you.html now has full lyrics, faint background art (assets/song-02-bg.png,
+  34% opacity), and a glowing traced-line overlay (assets/song-02-bg-lines.png,
+  same edge-detection + noise cleanup + pulse treatment as song-01).

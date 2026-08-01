@@ -5,13 +5,28 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PROJECT // ZRO — With You</title>
 <style>
-body{margin:0;background:#05070c;color:#d9ecff;font-family:Arial,sans-serif;
-min-height:100vh;}
-.wrap{width:min(700px,90vw);margin:0 auto;padding:60px 0;}
+body{margin:0;color:#d9ecff;font-family:Arial,sans-serif;min-height:100vh;position:relative;}
+.bg{position:fixed;inset:0;
+background:url('assets/song-02-bg.png') center 20% / cover no-repeat;
+opacity:.34;}
+.shade{position:fixed;inset:0;
+background:linear-gradient(180deg,#05070c 0%,rgba(5,7,12,.65) 15%,rgba(5,7,12,.8) 100%);}
+.lines{position:fixed;inset:0;
+background:url('assets/song-02-bg-lines.png') center 20% / cover no-repeat;
+mix-blend-mode:screen;
+opacity:.5;
+animation:linesPulse 6s ease-in-out infinite;
+pointer-events:none;}
+@keyframes linesPulse{
+0%,100%{opacity:.32}
+50%{opacity:.6}
+}
+.wrap{position:relative;z-index:2;width:min(700px,90vw);margin:0 auto;padding:60px 0;}
 .eyebrow{opacity:.6;font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;}
 h1{letter-spacing:.2em;font-weight:200;font-size:clamp(1.8rem,5vw,2.6rem);
 text-shadow:0 0 25px #88a5ff;margin:14px 0 30px;}
-.lyrics{margin-top:30px;line-height:1.9;color:#d6dcec;opacity:.75;white-space:pre-line;}
+.lyrics{margin-top:30px;line-height:1.9;color:#d6dcec;opacity:.85;white-space:pre-line;}
+.lyrics p{margin:0 0 1.6em;}
 .small{opacity:.7;font-size:.9rem;}
 a{color:#9fd0ff;text-decoration:none}
 .back{display:inline-block;margin-top:50px;}
@@ -19,11 +34,42 @@ a{color:#9fd0ff;text-decoration:none}
 </style>
 </head>
 <body>
+<div class="bg"></div>
+<div class="shade"></div>
+<div class="lines"></div>
 <div class="wrap">
 <div class="eyebrow">The Only Stars — Track 02</div>
 <h1>With You</h1>
 
-<div class="lyrics">[ Lyrics / notes placeholder — paste in when ready. ]</div>
+<div class="lyrics">
+<p>Set me alight
+With all you ever were
+I will never seek to burn
+The flame you gave assured
+I will always love you</p>
+
+<p>The mirrors are aligned
+The space engrossed between
+the stars will finally start to shine</p>
+
+<p>With you
+With you
+With you</p>
+
+<p>My eternal flame
+Rest between the sunward gaze
+I look between your only smile
+And feel the lifted ground</p>
+
+<p>With you
+With you</p>
+
+<p>With you&nbsp;&nbsp;&nbsp;&nbsp;With you
+With you&nbsp;&nbsp;&nbsp;&nbsp;With you
+With you&nbsp;&nbsp;&nbsp;&nbsp;With you
+With you&nbsp;&nbsp;&nbsp;&nbsp;With you
+With you&nbsp;&nbsp;&nbsp;&nbsp;With you</p>
+</div>
 
 <p class="small" style="margin-top:30px"></p>
 <a class="back" href="transmission-001.html">← Return to The Only Stars</a>
