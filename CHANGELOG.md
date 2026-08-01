@@ -116,3 +116,13 @@
 - Same treatment as adrift.html: aggressive full-screen twinkle, subtle background drift,
   scroll-safe layout.
 - WARP_DESTINATIONS in index.html now has 5 outcomes: void, 3 adrift variants, frozen-world.
+
+
+## Release035 - Sigil in Warp Button
+- Added the sacred-geometry sigil (assets/sigil.png) centered inside the warp button circle.
+- mix-blend-mode:screen used so the black background of the image disappears,
+  leaving only the glowing linework visible against the site background.
+- Slow breathing pulse (4.5s) on brightness/scale/opacity.
+- Separate irregular "glitch" flicker (9s cycle, brief flashes near the 93-96% mark)
+  layered on top, so it periodically glitches in and out rather than pulsing smoothly.
+- Does not affect the warp click/zoom behavior, which still targets .symbol.

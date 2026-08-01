@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Genesis 003</title><link rel='stylesheet' href='style.css?v=003'></head><body><canvas id='stars'></canvas><div class='nebula'></div><div class='vignette'></div><div id='boot' class='boot'></div><main id='hero' class='hero hidden'><div class='symbol'></div><div class='scan'>TRANSMISSION ESTABLISHED</div><h1>PROJECT // ZRO</h1><div class='line'></div><p>Beyond the edge of known space.</p><div class='buttons'><a href='#'>ENTER</a><a href='#'>ARCHIVE</a></div></main><script src='script.js?v=027'></script>
+<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Genesis 003</title><link rel='stylesheet' href='style.css?v=003'></head><body><canvas id='stars'></canvas><div class='nebula'></div><div class='vignette'></div><div id='boot' class='boot'></div><main id='hero' class='hero hidden'><div class='symbol'><div class='sigil-pulse'><img class='sigil' src='assets/sigil.png' alt=''></div></div><div class='scan'>TRANSMISSION ESTABLISHED</div><h1>PROJECT // ZRO</h1><div class='line'></div><p>Beyond the edge of known space.</p><div class='buttons'><a href='#'>ENTER</a><a href='#'>ARCHIVE</a></div></main><script src='script.js?v=027'></script>
 <div id="zro-signal" aria-hidden="true">
 <svg viewBox="0 0 100 100">
 <circle cx="50" cy="50" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -10,7 +10,7 @@
 
 <style>
 body.transitioning{opacity:0;transition:opacity .9s ease;}
-.symbol{cursor:pointer;}
+.symbol{cursor:pointer;position:relative;}
 .symbol.warping{animation:warpZoom 1.6s cubic-bezier(.6,0,.9,1) forwards;}
 @keyframes warpZoom{
 0%{transform:scale(1);opacity:1;}
@@ -21,6 +21,33 @@ body.warp-flash{animation:warpFlash 1.6s ease forwards;}
 @keyframes warpFlash{
 0%,60%{background:#02030b;}
 100%{background:#fff;}
+}
+.sigil-pulse{
+  position:absolute;
+  top:50%;left:50%;
+  width:72%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  animation:sigilPulse 4.5s ease-in-out infinite;
+}
+@keyframes sigilPulse{
+  0%,100%{opacity:.4;filter:brightness(.9);transform:translate(-50%,-50%) scale(1);}
+  50%{opacity:.7;filter:brightness(1.25);transform:translate(-50%,-50%) scale(1.04);}
+}
+.sigil{
+  display:block;
+  width:100%;
+  mix-blend-mode:screen;
+  animation:sigilGlitch 9s linear infinite;
+}
+@keyframes sigilGlitch{
+  0%,93%{opacity:1;transform:translate(0,0) scale(1);}
+  93.5%{opacity:.1;transform:translate(0,0) scale(.97);}
+  94%{opacity:.65;transform:translate(-2%,1%) scale(1.02);}
+  94.5%{opacity:.15;transform:translate(0,0) scale(1);}
+  95%{opacity:.7;transform:translate(2%,-1%) scale(1.01);}
+  95.5%{opacity:.2;}
+  96%,100%{opacity:1;transform:translate(0,0) scale(1);}
 }
 </style>
 <script>
