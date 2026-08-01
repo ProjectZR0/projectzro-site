@@ -188,3 +188,12 @@
 - Distinct "unstable/glitchy" animation instead of smooth breathing pulse, fitting
   the collapse/disruption theme: irregular opacity dips and micro-jolts on both
   background and lines layers rather than an even sine-wave loop.
+
+
+## Release045 - Starlit
+- song-06-starlit.html: full lyrics from doc (extended ending with repeated
+  "Because I / Believe it" and "Of you / And me" outro sections), background art
+  (assets/song-06-bg.png), traced glow lines (assets/song-06-bg-lines.png).
+- Calmer/gentler treatment (34% static opacity, slow 6s pulse) matching this
+  image's hopeful tone rather than the more intense "alive"/"unstable" styles
+  used on Pattern, Dance Hot, and Crash.

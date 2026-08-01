@@ -5,26 +5,108 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PROJECT // ZRO — Starlit</title>
 <style>
-body{margin:0;background:#05070c;color:#d9ecff;font-family:Arial,sans-serif;
-min-height:100vh;}
-.wrap{width:min(700px,90vw);margin:0 auto;padding:60px 0;}
+body{margin:0;color:#d9ecff;font-family:Arial,sans-serif;min-height:100vh;position:relative;}
+.bg{position:fixed;inset:0;
+background:url('assets/song-06-bg.png') center 25% / cover no-repeat;
+opacity:.34;}
+.shade{position:fixed;inset:0;
+background:linear-gradient(180deg,#05070c 0%,rgba(5,7,12,.65) 15%,rgba(5,7,12,.8) 100%);}
+.lines{position:fixed;inset:0;
+background:url('assets/song-06-bg-lines.png') center 25% / cover no-repeat;
+mix-blend-mode:screen;
+opacity:.5;
+animation:linesPulse 6s ease-in-out infinite;
+pointer-events:none;}
+@keyframes linesPulse{
+0%,100%{opacity:.32}
+50%{opacity:.6}
+}
+.wrap{position:relative;z-index:2;width:min(700px,90vw);margin:0 auto;padding:60px 0;}
 .eyebrow{opacity:.6;font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;}
 h1{letter-spacing:.2em;font-weight:200;font-size:clamp(1.8rem,5vw,2.6rem);
 text-shadow:0 0 25px #88a5ff;margin:14px 0 30px;}
-.lyrics{margin-top:30px;line-height:1.9;color:#d6dcec;opacity:.75;white-space:pre-line;}
+.lyrics{margin-top:30px;line-height:1.9;color:#d6dcec;opacity:.85;white-space:pre-line;}
+.lyrics p{margin:0 0 1.6em;}
 .small{opacity:.7;font-size:.9rem;}
 a{color:#9fd0ff;text-decoration:none}
 .back{display:inline-block;margin-top:50px;}
-.next{display:inline-block;margin-top:50px;margin-left:24px;}
 .prev{display:inline-block;margin-top:50px;margin-left:24px;}
+.next{display:inline-block;margin-top:50px;margin-left:24px;}
 </style>
 </head>
 <body>
+<div class="bg"></div>
+<div class="shade"></div>
+<div class="lines"></div>
 <div class="wrap">
 <div class="eyebrow">The Only Stars — Track 06</div>
 <h1>Starlit</h1>
 
-<div class="lyrics">[ Lyrics / notes placeholder — paste in when ready. ]</div>
+<div class="lyrics">
+<p>Let's talk about dreams now
+Let's talk about where we are in the wild
+Let's look upon the termination shock
+Collecting dust until it becomes rock
+Let's talk about dreams now
+Let's talk about all we could ever want
+Let's steal a violent star now
+Condensed down to see the inner beyond</p>
+
+<p>Of you
+And me
+As we take a blade to the galaxy</p>
+
+<p>Let's try
+To be
+One with the vast expanse</p>
+
+<p>Now I know you were not born of darkness
+Now I know you weren't born ashamed
+Still I'd like to love you now until the bitter end
+I'd like to keep your soul aflame
+Now I know you weren't there when it all became
+The ghost of all that still remains
+But I only have the courage for this one last fire
+Unwavering in miles of ink
+And the only part of me that will be bringing you down
+Is the only part of me left to be found
+But I was made to ease through darkness just to call your name
+In every justifiable world again</p>
+
+<p>Because I
+Believe it
+Because I
+I now live it
+Because I
+Believe it
+Justify
+The meaning</p>
+
+<p>Because I
+Believe it
+Because I
+I now live it
+Because I
+Believe it
+Justify
+The meaning</p>
+
+<p>Of you
+And me
+As we take a blade to the galaxy</p>
+
+<p>Let's try
+To be
+One with the vast expanse</p>
+
+<p>Of you
+And me
+As we take a blade to the galaxy</p>
+
+<p>Let's try
+To be
+One with the vast expanse</p>
+</div>
 
 <p class="small" style="margin-top:30px"></p>
 <a class="back" href="transmission-001.html">← Return to The Only Stars</a>
