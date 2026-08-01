@@ -5,26 +5,85 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PROJECT // ZRO — Dance Hot</title>
 <style>
-body{margin:0;background:#05070c;color:#d9ecff;font-family:Arial,sans-serif;
-min-height:100vh;}
-.wrap{width:min(700px,90vw);margin:0 auto;padding:60px 0;}
+body{margin:0;color:#d9ecff;font-family:Arial,sans-serif;min-height:100vh;position:relative;overflow-x:hidden;}
+.bg{position:fixed;inset:-3%;
+background:url('assets/song-04-bg.png') center 25% / cover no-repeat;
+opacity:.5;
+animation:bgBreathe 8s ease-in-out infinite;}
+@keyframes bgBreathe{
+0%,100%{transform:scale(1);opacity:.44}
+50%{transform:scale(1.035);opacity:.6}
+}
+.shade{position:fixed;inset:0;
+background:linear-gradient(180deg,#05070c 0%,rgba(5,7,12,.5) 15%,rgba(5,7,12,.72) 100%);}
+.lines{position:fixed;inset:-3%;
+background:url('assets/song-04-bg-lines.png') center 25% / cover no-repeat;
+mix-blend-mode:screen;
+opacity:.62;
+animation:linesPulse 2.8s ease-in-out infinite;
+pointer-events:none;}
+@keyframes linesPulse{
+0%,100%{opacity:.4}
+50%{opacity:.88}
+}
+.wrap{position:relative;z-index:2;width:min(700px,90vw);margin:0 auto;padding:60px 0;}
 .eyebrow{opacity:.6;font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;}
 h1{letter-spacing:.2em;font-weight:200;font-size:clamp(1.8rem,5vw,2.6rem);
-text-shadow:0 0 25px #88a5ff;margin:14px 0 30px;}
-.lyrics{margin-top:30px;line-height:1.9;color:#d6dcec;opacity:.75;white-space:pre-line;}
+text-shadow:0 0 25px #d88aff;margin:14px 0 30px;}
+.lyrics{margin-top:30px;line-height:1.9;color:#d6dcec;opacity:.9;white-space:pre-line;
+text-shadow:0 2px 10px rgba(0,0,0,.6);}
+.lyrics p{margin:0 0 1.6em;}
 .small{opacity:.7;font-size:.9rem;}
-a{color:#9fd0ff;text-decoration:none}
+a{color:#e0b3ff;text-decoration:none}
 .back{display:inline-block;margin-top:50px;}
-.next{display:inline-block;margin-top:50px;margin-left:24px;}
 .prev{display:inline-block;margin-top:50px;margin-left:24px;}
+.next{display:inline-block;margin-top:50px;margin-left:24px;}
 </style>
 </head>
 <body>
+<div class="bg"></div>
+<div class="shade"></div>
+<div class="lines"></div>
 <div class="wrap">
 <div class="eyebrow">The Only Stars — Track 04</div>
 <h1>Dance Hot</h1>
 
-<div class="lyrics">[ Lyrics / notes placeholder — paste in when ready. ]</div>
+<div class="lyrics">
+<p>As I proceed to seed into view&hellip;
+Encroaching on the things I should do&hellip;
+I fly beyond the cadence of my mind</p>
+
+<p>Let's fall
+Into a network of illuminate
+Is it so wrong
+To tell our children how they got this far?
+There's no stars
+To paint a picture of our broken hearts
+Bend fast, into the speed of all our light
+Bend fast</p>
+
+<p>Like a white light strobing into your divide,
+I've never seen an application be so divine
+I try yeah I try
+To be the face of all you've ever known</p>
+
+<p>And with a snowfall I come across as bitter cold
+But like a firestorm you show me just how to burn
+And then I see you for the very fuckin first time, fly</p>
+
+<p>Burn baby burn baby
+For all the heat that you feel I'm gonna see it baby
+Be hotter than the dance of stars burned out long past
+Be like the center of a dark star
+It's just how you dance
+So just</p>
+
+<p>Burn baby burn baby
+For all the heat that you feel I'm gonna see it baby
+Be hotter than the dance of stars burned out long past
+Be like the center of a dark star
+It's just how you dance</p>
+</div>
 
 <p class="small" style="margin-top:30px"></p>
 <a class="back" href="transmission-001.html">← Return to The Only Stars</a>

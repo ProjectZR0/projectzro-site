@@ -172,3 +172,10 @@
 - Added "← Previous Track" link to all song pages (song-02 through song-10),
   chaining backward through the tracklist. song-01 has no previous link (first track).
 - song-10 already had no "Next Track" link (last track) — unchanged.
+
+
+## Release043 - Dance Hot
+- song-04-dance-hot.html: full lyrics, background art (assets/song-04-bg.png),
+  traced glow lines tinted magenta-purple (assets/song-04-bg-lines.png) to match
+  this image's palette, "alive" treatment (breathing bg zoom, fast 2.8s line pulse).
+- Includes Previous/Next Track navigation from Release042.
