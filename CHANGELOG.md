@@ -166,3 +166,9 @@
 - More "alive" than previous songs per request: background opacity raised to ~50%
   with a slow 9s breathing zoom, and the line-glow pulse sped up and intensified
   (3.2s cycle, 42-85% opacity) instead of the slower/subtler treatment used before.
+
+
+## Release042 - Previous Track Navigation
+- Added "← Previous Track" link to all song pages (song-02 through song-10),
+  chaining backward through the tracklist. song-01 has no previous link (first track).
+- song-10 already had no "Next Track" link (last track) — unchanged.
