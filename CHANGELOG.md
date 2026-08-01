@@ -137,3 +137,9 @@
   stanza spacing preserved from the source document.
 - Added the concept scene image (assets/song-01-bg.png) as a faint, fixed
   background (16% opacity, dark gradient shade on top for legibility).
+
+
+## Release038 - Background Visibility Boost
+- Increased background art opacity on song-01-the-source.html (16% → 34%)
+  and lightened the dark shade gradient slightly to compensate, so the scene
+  reads more clearly while lyrics stay legible.
