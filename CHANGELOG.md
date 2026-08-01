@@ -179,3 +179,12 @@
   traced glow lines tinted magenta-purple (assets/song-04-bg-lines.png) to match
   this image's palette, "alive" treatment (breathing bg zoom, fast 2.8s line pulse).
 - Includes Previous/Next Track navigation from Release042.
+
+
+## Release044 - Crash
+- song-05-crash.html: full lyrics (corrected "breath" -> "bred" per request),
+  background art (assets/song-05-bg.png), traced glow lines tinted warm gold-white
+  (assets/song-05-bg-lines.png) to match this image's palette.
+- Distinct "unstable/glitchy" animation instead of smooth breathing pulse, fitting
+  the collapse/disruption theme: irregular opacity dips and micro-jolts on both
+  background and lines layers rather than an even sine-wave loop.
