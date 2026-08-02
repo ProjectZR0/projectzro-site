@@ -197,3 +197,22 @@
 - Calmer/gentler treatment (34% static opacity, slow 6s pulse) matching this
   image's hopeful tone rather than the more intense "alive"/"unstable" styles
   used on Pattern, Dance Hot, and Crash.
+
+
+## Release046 - Calibrate
+- song-08-calibrate.html: full lyrics, background art (assets/song-08-bg.png),
+  traced glow lines tinted warm gold (assets/song-08-bg-lines.png) to match
+  this image's palette.
+- Calm/reflective treatment (36% opacity, slow 6.5s pulse), matching the
+  contemplative tone ("Not everything broken wishes to be restored...").
+- Note: built out of order (track 07, Remind Me Again, not yet done) —
+  navigation still points correctly to 07 as previous and 09 as next.
+
+
+## Release047 - Remind Me Again
+- song-07-remind-me-again.html: full lyrics, background art (assets/song-07-bg.png),
+  traced glow lines tinted cool blue-violet (assets/song-07-bg-lines.png).
+- Distinct "digital flicker" treatment (steps() easing, brief sharp cuts rather
+  than smooth fades) to match the android/machine theme in the lyrics, instead of
+  a breathing pulse.
+- Track order confirmed correct: 06 Starlit -> 07 Remind Me Again -> 08 Calibrate.
