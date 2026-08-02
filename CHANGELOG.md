@@ -237,3 +237,8 @@
   only to become the light that someone else could find." plus a
   "TRANSMISSION COMPLETE" status line marking the end of the tracklist.
 - No "Next Track" link (last track) — only Previous Track and back to album.
+
+
+## Release050 - Lore Text Correction
+- transmission-001.html: final word of closing sentence changed from "by" to "for"
+  ("...the one worth navigating for.").
