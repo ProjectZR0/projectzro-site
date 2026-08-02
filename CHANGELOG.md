@@ -226,3 +226,14 @@
 - Distinct "dreamy drift" treatment: slow 16s alternating pan/zoom on both background
   and lines (rather than a fixed frame), plus a gentle 7s pulse on the lines —
   matches the floating-islands imagery and "let's fly" theme better than a static pulse.
+
+
+## Release049 - The Only Stars (Closing Track)
+- song-10-the-only-stars.html rebuilt as a hero-style closing page rather than
+  the standard lyrics layout: no lyrics block, background art at higher
+  visibility (62% vs the usual ~34-50%) since there's no dense text to protect,
+  traced glow lines (assets/song-10-bg-lines.png), same slow drift as Avelon.
+- Text is just the closing line: "The universe never asked us to become stars...
+  only to become the light that someone else could find." plus a
+  "TRANSMISSION COMPLETE" status line marking the end of the tracklist.
+- No "Next Track" link (last track) — only Previous Track and back to album.
