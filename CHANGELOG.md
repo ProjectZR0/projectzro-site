@@ -216,3 +216,13 @@
   than smooth fades) to match the android/machine theme in the lyrics, instead of
   a breathing pulse.
 - Track order confirmed correct: 06 Starlit -> 07 Remind Me Again -> 08 Calibrate.
+
+
+## Release048 - Avelon
+- song-09-avelon.html: full lyrics from doc (both verses, extended outro repeating
+  "Let's fly / Into / Avelon" and closing on "I feel you / Connecting on a wire"),
+  background art (assets/song-09-bg.png), traced glow lines tinted soft lavender-white
+  (assets/song-09-bg-lines.png).
+- Distinct "dreamy drift" treatment: slow 16s alternating pan/zoom on both background
+  and lines (rather than a fixed frame), plus a gentle 7s pulse on the lines —
+  matches the floating-islands imagery and "let's fly" theme better than a static pulse.
